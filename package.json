@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ncc build server.js -o D:\\VSS2022\\5SFeedbackBoxApi\\Release\\"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "vss",
   "license": "ISC",
