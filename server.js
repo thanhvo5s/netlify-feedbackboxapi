@@ -3,9 +3,7 @@ const express = require('express')
 //Solve CORS Error in app
 const cors = require("cors")
 //const domainsFromEnv = process.env.CORS_DOMAINS || ""
-const whitelist = ["http://192.168.1.6:19006", "http://192.168.1.2:19006", 
-"http://localhost:19006", "http://192.168.1.2:19007", "http://localhost:19007",
-"https://5sfeedbackboxadmin.netlify.app", "https://5sfeedbackbox.netlify.app"]
+const whitelist = ["http://192.168.1.6:19006", "http://192.168.1.2:19006", "http://localhost:19006", "http://192.168.1.2:19007", "http://localhost:19007", "https://5sfeedbackboxadmin.netlify.app", "https://5sfeedbackbox.netlify.app"]
 //console.log(`domainsFromEnv = ${domainsFromEnv}`)
 //const whitelist = domainsFromEnv.split(",").map(item => item.trim())
 
