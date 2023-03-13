@@ -59201,10 +59201,10 @@ const corsOptions = {
 
 const app = express()
 
-//app.use(cors({
-//  origin: '*'
-//}));
-app.use(cors(corsOptions))//Solve CORS Error in app
+app.use(cors({
+  origin: '*'
+}));
+//app.use(cors(corsOptions))//Solve CORS Error in app
 
 const bodyParser = __nccwpck_require__(7076)
 __nccwpck_require__(2437).config()
