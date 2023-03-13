@@ -23,7 +23,10 @@ const corsOptions = {
 
 const app = express()
 
-app.use(cors(corsOptions))//Solve CORS Error in app
+app.use(cors({
+  origin: '*'
+}));
+//app.use(cors(corsOptions))//Solve CORS Error in app
 
 const bodyParser = require('body-parser')
 require('dotenv').config()
