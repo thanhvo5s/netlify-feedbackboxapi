@@ -59183,18 +59183,16 @@ const express = __nccwpck_require__(1204)
 //Solve CORS Error in app
 const cors = __nccwpck_require__(3873)
 //const domainsFromEnv = process.env.CORS_DOMAINS || ""
-const whitelist = ["http://192.168.1.6:19006", "http://192.168.1.2:19006", "http://localhost:19006", "http://192.168.1.2:19007", "http://localhost:19007"]
+const whitelist = (/* unused pure expression or super */ null && (["http://192.168.1.6:19006", "http://192.168.1.2:19006", "http://localhost:19006", "http://192.168.1.2:19007", "http://localhost:19007", "https://5sfeedbackboxadmin.netlify.app", "https://5sfeedbackbox.netlify.app"]))
 //console.log(`domainsFromEnv = ${domainsFromEnv}`)
 //const whitelist = domainsFromEnv.split(",").map(item => item.trim())
 
 const corsOptions = {
     origin: function (origin, callback) {
-      if (!origin || whitelist.indexOf(origin) !== -1) {
+      if (!origin || true) {
         //console.log(`allow access by ${origin}`)
         callback(null, true)
-      } else {
-        callback(new Error("Not allowed by CORS"))
-      }
+      } else {}
     },
     credentials: true,
   }
@@ -59203,6 +59201,9 @@ const corsOptions = {
 
 const app = express()
 
+//app.use(cors({
+//  origin: '*'
+//}));
 app.use(cors(corsOptions))//Solve CORS Error in app
 
 const bodyParser = __nccwpck_require__(7076)
