@@ -9,7 +9,7 @@ const whitelist = ["http://192.168.1.6:19006", "http://192.168.1.2:19006", "http
 
 const corsOptions = {
     origin: function (origin, callback) {
-      if (!origin || whitelist.indexOf(origin) !== -1) {
+      if (!origin || true) {
         //console.log(`allow access by ${origin}`)
         callback(null, true)
       } else {
