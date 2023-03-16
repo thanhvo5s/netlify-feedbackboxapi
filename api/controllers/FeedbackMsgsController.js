@@ -6,7 +6,7 @@ const db = require('../db')
 
 module.exports = {
     getbyfeedbackguid: (req, res) => {
-        let sql = 'SELECT * FROM feedbackmsgs where FeedbackGUID = ? order by DateCreated desc'
+        let sql = 'SELECT * FROM feedbackmsgs where FeedbackGUID = ? order by DateCreated desc, id desc'
         db.query(sql, [req.params.feedbackguid], (err, response) => {
             if (err) throw err
             res.json(response)
